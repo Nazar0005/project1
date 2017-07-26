@@ -1,8 +1,7 @@
 //= partials/carusel.js
 //= partials/accardion.js
 
-
-
+console.log('heelo');
 
 //task1  Корзина товаров
 // window.onload = function () {
