@@ -1,0 +1,220 @@
+@import 'reset';
+@import 'fonts';
+@import 'variable';
+@import 'libs';
+@import 'grid';
+@import 'mixins';
+@import 'blocks/placeholder';
+
+// @import 'smart-grid';
+
+
+.col-flex {
+  @include flex();
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+}
+
+.row-flex {
+  @include line();
+  @include col(3);
+ background-color: #477FB7;
+ cursor: pointer;
+ color: #fff;
+ text-align: center;
+}
+
+
+.age-list {
+  @include flex($none);
+  background-color: red;
+  overflow: hidden;
+}
+
+.age__item {
+  @include line($none);
+  @include col(3, $none);
+  @include col-sm(12, $none);
+  background-color: #B34EE9;
+
+}
+
+
+.task {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+
+
+
+
+.list {
+  @include flex();
+}
+
+.tabs-title {
+ display: flex;
+ background-color: #000;
+}
+
+.tab {
+  background-color: #B34EE9;
+  flex-grow: 1;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: #000;
+  }
+}
+
+
+
+.hide {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup-layer-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,255,169,.8);
+}
+
+.popup-active {
+  display: block;
+}
+
+.overlay-active {
+  display: block;
+}
+
+
+
+.list__item {
+  margin-bottom: 15px;
+
+  cursor: pointer;
+  text-align: center;
+
+  color: #222;
+  border: 4px solid transparent;
+  background-color: orange;
+  @include line();
+  @include col(3);
+}
+
+.total-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.slider {
+  position: relative;
+
+  display: flex;
+
+  min-height: 550px;
+
+  border: 1px solid #222;
+}
+
+.slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  transition: opacity .5s;
+
+  opacity: 0;
+  color: #000;
+
+  font-weight: bold;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  max-width: 320px;
+
+  input {
+    width: 100px;
+    transition: width 1s;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #9A9A9A;
+
+    &:focus {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+
+
+@import 'base';
+@import 'blocks/button';
+@import 'blocks/test/section-header';
+@import 'blocks/test/section';
+@import 'blocks/test/title';
+@import 'blocks/test/icon';
+
+// Block
+@import 'blocks/modal'; // Стили для модальных Окон
+@import 'blocks/carusel'; // Стили для модальных Окон
+@import 'blocks/accardion'; // Стили для модальных Окон
+@import 'blocks/window.hints'; // Стили для модальных Окон
+
+@import 'blocks/footer';
+
+
+
+// Media
+@import 'media'; //Всегда в конце
